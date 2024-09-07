@@ -1,0 +1,48 @@
+body {
+    margin: 0;
+    overflow: hidden;
+    background: black;
+    color: limegreen;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+#matrix {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: black;
+}
+
+.matrix-column {
+    position: absolute;
+    top: 0;
+    animation: fall 10s linear infinite;
+    white-space: nowrap;
+}
+
+@keyframes fall {
+    0% {
+        transform: translateY(-100%);
+    }
+    100% {
+        transform: translateY(100vh);
+    }
+}
+
+.matrix-char {
+    display: block;
+    font-size: 20px;
+    opacity: 0;
+    animation: fadeIn 0.3s forwards;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}

@@ -1,0 +1,24 @@
+body.galaxy #background {
+    background: linear-gradient(45deg, #2e2e44,#323244,#191922,#e3e3e4);
+    background-size: 400% 400%;
+    animation: galaxyBackground 15s ease forwards; /* Utilizar 'forwards' para mantener el último estado */
+}
+
+body.galaxy .star {
+    position: absolute;
+    width: 2px;
+    height: 2px;
+    background: white;
+    border-radius: 50%;
+    animation: twinkle 2s infinite;
+}
+
+@keyframes galaxyBackground {
+    0% { background-position: 0% 50%; }
+    100% { background-position: 100% 50%; }
+}
+
+@keyframes twinkle {
+    0%, 100% { opacity: 0; }
+    50% { opacity: 1; }
+}
